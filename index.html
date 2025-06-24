@@ -1,37 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OUTLAW GARAGE</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <div class="header">
-      <h1 class="logo">OUTLAW<br>GARAGE</h1>
-      <p class="manifesto">
-        Welcome to a space built for underground car culture.<br>
-        This site exists to support creative machines, real drivers, and loud expression.<br>
-        We don't follow the rules — we build our own roads.
-      </p>
-    </div>
+const map = L.map('map').setView([-21.7805, -45.9572], 13);
 
-    <div class="menu">
-      <h3>RESOURCES (A - Z)</h3>
-      <ol>
-        <li><a href="#">1. How to Host a Car Meet</a></li>
-        <li><a href="#">2. How to Modify Your Ride</a></li>
-        <li><a href="#">3. How to Photograph Cars</a></li>
-        <li><a href="#">4. Where to Find Parts</a></li>
-        <li><a href="#">5. How to Start a Car Club</a></li>
-        <li><a href="#">6. Submit Your Build</a></li>
-      </ol>
-    </div>
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
 
-    <div class="footer-tag">
-      <p>"POST SPEED ERA"</p>
-    </div>
-  </div>
-</body>
-</html>
+
+const eventos = [
+  {
+    nome: "Encontro Centro",
+    data: "2025-07-10",
+    descricao: "Concentração na praça central com carros rebaixados e som automotivo.",
+    lat: -21.7805,
+    lon: -45.9572
+  },
+  {
+    nome: "Drift Noturno",
+    data: "2025-07-20",
+    descricao: "Evento de drift na estrada da Serra. Entrada gratuita.",
+    lat: -21.785,
+    lon: -45.950
+  },
+  {
+    nome: "Domingueira do Gol Quadrado",
+    data: "2025-07-28",
+    descricao: "Encontro exclusivo de Volks, com churrasco e música.",
+    lat: -21.778,
+    lon: -45.962
+  }
+];
+
+
+eventos.forEach(e => {
+  L.marker([e.lat, e.lon]).addTo(map)
+    .bindPopup(`<b>${e.nome}</b><br>${e.data}<br>${e.descricao}`);
+});
+
+
+const ul = document.getElementById("eventos-lista");
+
+eventos.forEach(e => {
+  const li = document.createElement("li");
+  li.innerHTML = `<strong>${e.nome}</strong> – ${e.data}<br>${e.descricao}`;
+  ul.appendChild(li);
+});
