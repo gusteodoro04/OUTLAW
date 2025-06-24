@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Enviar Evento</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <h1 class="logo">NOVO ENCONTRO</h1>
+  <form method="POST" action="http://localhost:3000/eventos" class="formulario">
+    <label>Nome do evento:<br><input name="nome" required></label><br>
+    <label>Descrição:<br><textarea name="descricao"></textarea></label><br>
+    <label>Data:<br><input type="date" name="data"></label><br>
+    <label>Latitude:<br><input name="latitude" step="any"></label><br>
+    <label>Longitude:<br><input name="longitude" step="any"></label><br>
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
+<script>
+  // Redireciona para a página de eventos após o envio
+  document.querySelector('.formulario').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+    fetch(this.action, {
+      method: 'POST',
+      body: new URLSearchParams(new FormData(this))
+    }).then(() => {
+      window.location.href = 'eventos.html'; // Redireciona para a página de eventos
+    });
+  });

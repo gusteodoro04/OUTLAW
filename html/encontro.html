@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Outlaw Garage – Encontros</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="logo">ENCONTROS AUTOMOTIVOS</h1>
+    <p class="manifesto">
+      Veja abaixo os próximos eventos da cultura automotiva independente.<br>
+      Os locais estão marcados no mapa. Quer adicionar o seu? <a href="enviar-evento.html">Clique aqui</a>.
+    </p>
+
+    <div id="map" class="mapa-grande"></div>
+
+    <div class="lista-eventos">
+      <h2>Eventos confirmados</h2>
+      <ul id="eventos-lista">
+        <!-- Eventos vão aparecer aqui -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/scripts/mapa.js"></script>
+</body>
+</html>

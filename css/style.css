@@ -1,0 +1,175 @@
+/* === ESTILO BASE BRUTALISTA === */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #000;
+  font-family: 'Courier New', monospace;
+}
+
+.container {
+  padding: 20px;
+}
+
+.logo {
+  font-size: 5rem;
+  font-weight: bold;
+  letter-spacing: -2px;
+  line-height: 90%;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.manifesto {
+  max-width: 500px;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.menu h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.menu ol {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 5px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(86, 67, 129);
+  font-size: 1rem;
+}
+
+.footer-tag {
+  margin-top: 50px;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+.trueno{
+  float: right;
+}
+
+/* === MAPA E EVENTOS === */
+
+#map,
+.mapa-grande {
+  height: 400px;
+  width: 100%;
+  margin-top: 20px;
+  border: 2px solid #000;
+}
+
+.lista-eventos {
+  padding: 10px;
+  border-top: 2px dashed #000;
+  font-family: monospace;
+}
+
+.lista-eventos h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.lista-eventos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-eventos li {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* === FORMULÁRIO === */
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-family: monospace;
+  border: 1px solid #000;
+}
+
+button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* === GALERIA DE CARROS === */
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.carro {
+  width: 300px;
+  border: 2px solid #000;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+/* === MODO ESCURO (RESPONDE AO SISTEMA) === */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111;
+    color: #fff;
+  }
+
+  a {
+    color: #66b2ff;
+  }
+
+  .logo {
+    color: #fff;
+  }
+
+  .manifesto {
+    color: #ccc;
+  }
+
+  #map {
+    border-color: #444;
+  }
+
+  button {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .carro {
+    background: #222;
+    border-color: #666;
+  }
+
+  .lista-eventos li {
+    border-color: #555;
+  }
+
+  .formulario input,
+  .formulario textarea {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #888;
+  }
+}
