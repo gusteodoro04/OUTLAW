@@ -178,4 +178,101 @@ button {
     color: #fff;
     border: 1px solid #888;
   }
+}/* === MINI-REDDIT / FÓRUM === */
+
+.post-form, .post, .comment-item {
+  background: #fff;
+  border: 2px solid #000;
+  padding: 12px;
+  border-radius: 0;
+  margin-bottom: 15px;
+  font-family: monospace;
 }
+
+.post-form input,
+.post-form textarea,
+.comment-item input,
+.comment-item textarea {
+  width: 100%;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding: 6px;
+  font-family: monospace;
+  border: 2px solid #000;
+  background: #fff;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.post-form button,
+.comment-item button,
+.reply-btn {
+  background: black;
+  color: white;
+  border: 2px solid #000;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.post h3 {
+  margin: 0 0 6px 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.post img,
+.comment-item img {
+  max-width: 100%;
+  margin-top: 6px;
+  border: 2px solid #000;
+}
+
+.comments {
+  margin-left: 20px;
+  margin-top: 8px;
+}
+
+.reply-btn {
+  background: none;
+  border: 2px solid #000;
+  padding: 4px 6px;
+  color: black;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* === MODO ESCURO === */
+
+@media (prefers-color-scheme: dark) {
+  .post-form, .post, .comment-item {
+    background: #111;
+    color: #fff;
+    border-color: #fff;
+  }
+
+  .post-form input,
+  .post-form textarea,
+  .comment-item input,
+  .comment-item textarea {
+    background: #000;
+    color: #fff;
+    border-color: #fff;
+  }
+
+  .post-form button,
+  .comment-item button,
+  .reply-btn {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+  }
+
+  .post img,
+  .comment-item img {
+    border-color: #fff;
+  }
+}
+
