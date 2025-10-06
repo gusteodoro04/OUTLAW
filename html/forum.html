@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mini-Reddit</title>
+  <link rel="stylesheet" href="forum.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Mini-Reddit</h1>
+
+    <form id="postForm" enctype="multipart/form-data" class="post-form">
+      <input name="user" placeholder="Seu nome">
+      <input name="title" placeholder="Título do tópico" required>
+      <textarea name="text" placeholder="Conte algo..." required></textarea>
+      <input type="file" name="image" accept="image/*">
+      <button type="submit">Publicar</button>
+    </form>
+
+    <section id="feed"></section>
+  </main>
+
+  <script src="forum.js"></script>
+</body>
+</html>
